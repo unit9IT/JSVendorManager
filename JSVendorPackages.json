@@ -62,6 +62,10 @@
       {
         "caption": "Threejs GIT min",
         "url":"https://raw.github.com/mrdoob/three.js/master/build/three.min.js"
+      },
+      {
+        "caption": "Stats GIT min",
+        "url":"https://raw.github.com/mrdoob/stats.js/master/build/stats.min.js"
       }
     ]
   },
