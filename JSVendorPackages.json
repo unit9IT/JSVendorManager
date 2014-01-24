@@ -26,6 +26,10 @@
       {
         "caption": "jQuery 2.0.3 map",
         "url":"http://code.jquery.com/jquery-2.0.3.min.map"
+      },
+      {
+        "caption": "jQuery-ui 1.10.4 map",
+        "url":"http://code.jquery.com/ui/1.10.4/jquery-ui.js"
       }
     ]
   },
@@ -147,7 +151,35 @@
       {
         "caption": "jQuery GSAP min",
         "url":"https://raw.github.com/greensock/GreenSock-JS/master/src/minified/jquery.gsap.min.js"
-      }
+      },
+      {
+        "caption": "TimelineLite min",
+        "url":"https://raw.github.com/greensock/GreenSock-JS/master/src/minified/TimelineLite.min.js"
+      },
+      {
+        "caption": "TimelineMax min",
+        "url":"https://raw.github.com/greensock/GreenSock-JS/master/src/minified/TimelineMax.min.js"
+      },
+      {
+        "caption": "TweenLite dev",
+        "url":"https://raw.github.com/greensock/GreenSock-JS/master/src/uncompressed/TweenLite.js"
+      },
+      {
+        "caption": "TweenMax dev",
+        "url":"https://raw.github.com/greensock/GreenSock-JS/master/src/uncompressed/TweenMax.js"
+      },
+      {
+        "caption": "jQuery GSAP dev",
+        "url":"https://raw.github.com/greensock/GreenSock-JS/master/src/uncompressed/jquery.gsap.js"
+      },
+      {
+        "caption": "TimelineLite dev",
+        "url":"https://raw.github.com/greensock/GreenSock-JS/master/src/uncompressed/TimelineLite.js"
+      },
+      {
+        "caption": "TimelineMax dev",
+        "url":"https://raw.github.com/greensock/GreenSock-JS/master/src/uncompressed/TimelineMax.js"
+      }      
     ]
   },
   {
