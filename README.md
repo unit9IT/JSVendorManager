@@ -1,7 +1,7 @@
 Sublime JSVendorManager
 ===============
 
-A Javascript vendor downloader/updater that downloads libraries directly from their GIT/CDN sources and places them in the selected folder.
+A Javascript vendor downloader/updater for **Sublime Text 3** that downloads libraries directly from their GIT/CDN sources and places them in the selected folder.
 
 Useful for setting up new projects and download specific version of a library.
 
@@ -10,7 +10,7 @@ Installation
 
 * Download as ZIP
 * Open Preferences -> Browse Packages in Sublime Text 3
-* Unzip contents into JSVendorManager subfolder
+* Unzip contents into JSVendorManager subfolder (win) or Packages/JSVendorManager (OSX)
 
 Usage
 -------------
