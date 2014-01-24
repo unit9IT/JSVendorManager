@@ -18,13 +18,15 @@ class JsvendormanagerCommand(sublime_plugin.WindowCommand):
     def __init__(self,someArgs):
         self.isEnabled = True
 
+    def log(sefl,msg):
+        sublime.active_window().active_view().set_status("JSVendorManager","[JSVendorManager] "+msg)
+        print("[JSVendorManager] "+msg)
 
     def dlfile(self,url,dest_path,callback = None):
         # Open the url
-        sublime.active_window().active_view().set_status("JSVendorManager","")
 
         try:
-            sublime.active_window().active_view().set_status("JSVendorManager","[JSVendorManager] Downloading List...")
+            self.log("Downloading List...")
             f = urllib.request.urlopen(url)
 
             if(callback is None):
@@ -36,11 +38,11 @@ class JsvendormanagerCommand(sublime_plugin.WindowCommand):
                     local_file.write(f.read())
             else:
                 sublime.message_dialog("Parsing the JSON list may take a little while\nPlease be patient...")
-                sublime.active_window().active_view().set_status("JSVendorManager","[JSVendorManager] List Downloaded, Parsing JSON...")
+                self.log("List Downloaded. Parsing JSON...")
                 output = json.loads( f.read().decode("utf-8") )
-                sublime.active_window().active_view().set_status("JSVendorManager","[JSVendorManager] JSON parsed, building list...")
+                self.log("JSON parsed. Building list...")
                 callback(output)
-                sublime.active_window().active_view().set_status("JSVendorManager","")
+                
   
 
         #handle errors
@@ -92,7 +94,8 @@ class JsvendormanagerCommand(sublime_plugin.WindowCommand):
 
             self.lst.append( text )
 
-        sublime.set_timeout(lambda: sublime.active_window().show_quick_panel(self.lst,self.onCDNPacketSelect), 10)        
+        sublime.set_timeout(lambda: sublime.active_window().show_quick_panel(self.lst,self.onCDNPacketSelect), 10)   
+        self.log("DONE")     
 
     def onCDNPacketSelect(self,selected):
         if(selected != -1):
@@ -174,6 +177,7 @@ class JsvendormanagerCommand(sublime_plugin.WindowCommand):
             self.lst.append(item['caption'])
 
         sublime.set_timeout(lambda: sublime.active_window().show_quick_panel(self.lst,self.onListSelect), 10)
+        self.log("DONE")
         
 
 
@@ -219,6 +223,12 @@ class JsvendormanagerCommand(sublime_plugin.WindowCommand):
         return self.isEnabled
 
     def run(self,dirs,mode = None):
+
+        if(dirs is None or len(dirs) == 0):
+            sublime.error_message("Please select a folder")
+            return
+
+
         self.isEnabled = False
         self.dest_path = dirs[0]
 
