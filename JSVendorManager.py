@@ -1,7 +1,23 @@
 import sublime
 import sublime_plugin
 import os
-import urllib
+
+try:
+    from urllib.request import Request
+    from urllib.request import urlopen
+    from urllib.error import HTTPError
+    from urllib.error import URLError
+    from urllib.request import ProxyHandler
+    from urllib.request import build_opener
+    from urllib.request import install_opener
+except:
+    from urllib2 import Request
+    from urllib2 import urlopen
+    from urllib2 import HTTPError
+    from urllib2 import URLError
+    from urllib2 import ProxyHandler
+    from urllib2 import build_opener
+    from urllib2 import install_opener
 
 try:
     import simplejson as json
@@ -27,7 +43,7 @@ class JsvendormanagerCommand(sublime_plugin.WindowCommand):
 
         try:
             self.log("Downloading List...")
-            f = urllib.request.urlopen(url)
+            f = urlopen(url)
 
             if(callback is None):
                 bn = os.path.basename(url)
@@ -46,9 +62,9 @@ class JsvendormanagerCommand(sublime_plugin.WindowCommand):
   
 
         #handle errors
-        except urllib.request.HTTPError as e:
+        except HTTPError as e:
             print("HTTP Error:", e.code, url )
-        except urllib.request.URLError as e:
+        except URLError as e:
             print("URL Error:", e.reason, url )
 
         self.isEnabled = True
