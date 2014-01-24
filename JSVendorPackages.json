@@ -145,36 +145,36 @@
         "url":"https://raw.github.com/greensock/GreenSock-JS/master/src/minified/TweenLite.min.js"
       },
       {
-        "caption": "TweenMax min",
-        "url":"https://raw.github.com/greensock/GreenSock-JS/master/src/minified/TweenMax.min.js"
-      },
-      {
-        "caption": "jQuery GSAP min",
-        "url":"https://raw.github.com/greensock/GreenSock-JS/master/src/minified/jquery.gsap.min.js"
-      },
-      {
-        "caption": "TimelineLite min",
-        "url":"https://raw.github.com/greensock/GreenSock-JS/master/src/minified/TimelineLite.min.js"
-      },
-      {
-        "caption": "TimelineMax min",
-        "url":"https://raw.github.com/greensock/GreenSock-JS/master/src/minified/TimelineMax.min.js"
-      },
-      {
         "caption": "TweenLite dev",
         "url":"https://raw.github.com/greensock/GreenSock-JS/master/src/uncompressed/TweenLite.js"
+      },
+      {
+        "caption": "TweenMax min",
+        "url":"https://raw.github.com/greensock/GreenSock-JS/master/src/minified/TweenMax.min.js"
       },
       {
         "caption": "TweenMax dev",
         "url":"https://raw.github.com/greensock/GreenSock-JS/master/src/uncompressed/TweenMax.js"
       },
       {
+        "caption": "jQuery GSAP min",
+        "url":"https://raw.github.com/greensock/GreenSock-JS/master/src/minified/jquery.gsap.min.js"
+      },
+      {
         "caption": "jQuery GSAP dev",
         "url":"https://raw.github.com/greensock/GreenSock-JS/master/src/uncompressed/jquery.gsap.js"
       },
       {
+        "caption": "TimelineLite min",
+        "url":"https://raw.github.com/greensock/GreenSock-JS/master/src/minified/TimelineLite.min.js"
+      },
+      {
         "caption": "TimelineLite dev",
         "url":"https://raw.github.com/greensock/GreenSock-JS/master/src/uncompressed/TimelineLite.js"
+      },
+      {
+        "caption": "TimelineMax min",
+        "url":"https://raw.github.com/greensock/GreenSock-JS/master/src/minified/TimelineMax.min.js"
       },
       {
         "caption": "TimelineMax dev",
@@ -218,6 +218,38 @@
         "caption": "UnderscoreJS map",
         "url":"https://raw.github.com/jashkenas/underscore/master/underscore-min.map"
       }  
+    ]
+  },
+  {
+    "caption" : "RequireJS",
+    "packages" :
+    [
+      {
+        "caption" : "RequireJS 2.1.10 min",
+        "url" : "http://requirejs.org/docs/release/2.1.10/minified/require.js"
+      },
+      {
+        "caption" : "RequireJS 2.1.10 dev",
+        "url" : "http://requirejs.org/docs/release/2.1.10/comments/require.js"
+      },
+      {
+        "caption" : "RequireJS 2.1.10 r.js",
+        "url" : "http://requirejs.org/docs/release/2.1.10/r.js"
+      }
+    ]
+  },
+  {
+    "caption" : "dat.GUI",
+    "packages" :
+    [
+      {
+        "caption" : "dat.GUI dev",
+        "url" : "https://raw.github.com/dataarts/dat.gui/master/build/dat.gui.js"
+      },
+      {
+        "caption" : "dat.GUI min",
+        "url" : "https://raw.github.com/dataarts/dat.gui/master/build/dat.gui.min.js"
+      }
     ]
   }
 ]
